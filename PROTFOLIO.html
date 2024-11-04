@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><img src="./H.jpg" 
+                    alt="profile" width="250" height="200"></td>
+            <td>
+                <h1>HARI HARAN D</h1>
+                <h3>B.Tech ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</h3>
+                <h3>BANNARI AMMAN INSTITUTION,<br>Sathyamangalam</h3>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h3>EDUCATION</h3>
+    <ul>
+        <li><strong>SSLC</strong>:ADHARSH VIDHYALAYA MATRIC HR.SEC.SCHOOL (2019-2020) - 86%</li>
+        <li><strong>HSC</strong>: ADHARSH VIDHYALAYA MATRIC HR.SEC.SCHOOL (2021-2022) - 74%</li>
+    </ul>
+    <hr>
+    <h3>INTERESTS</h3>
+    <ul>
+        <li>JAVA DEVELOPMENT</li>
+        <li>FULL-STACK</li>
+    </ul>
+    
+    <h3>SKILLS</h3>
+    <ul>
+        <li>C, Java, Python</li>
+    </ul>
+    <hr>
+    <h3>LANGUAGES</h3>
+    <ul>
+        <li>Tamil, English</li>
+    </ul>
+</body>
+
+</html>
+
+
+import java.util.Scanner;
+
+public class SimpleChatbot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hello! I'm a chatbot. What's your name?");
+        String name = scanner.nextLine();
+
+        String userInput;
+        do {
+            System.out.println("How can I help you?");
+            userInput = scanner.nextLine();
+
+            switch (userInput.toLowerCase()) {
+                case "hi":
+                case "hello":
+                    System.out.println("BOT : Hello! How can I assist you?");
+                    break;
+                case "how are you?":
+                    System.out.println("BOT : I'm just a program, but thanks for asking!");
+                    break;
+                case "what is your name?":
+                    System.out.println("BOT : I'm a simple chatbot.");
+                    break;
+                case "exit":
+                    System.out.println("BOT : Goodbye, " + name + "!");
+                    break;
+                default:
+                    System.out.println("I didn't understand that.");
+            }
+        } while (!userInput.equalsIgnoreCase("exit"));
+
+        scanner.close();
+    }
+}
